@@ -1,0 +1,321 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* animation ------  */
+@keyframes left{
+  from{
+      margin-left: -10%;
+  }
+  to{
+      margin-left: 0%;
+  }
+}
+@keyframes leftdown{
+  from{
+      margin-left: -10%;
+      margin-top: 3%;
+  }
+  to{
+      margin-left: 0%;
+      margin-top: 0%;
+  }
+}
+@keyframes right{
+  from{
+      margin-left: 10%;
+  }
+  to{
+      margin-left: 0%;
+  }
+}
+@keyframes top{
+  from{
+      margin-top: -10%;
+  }
+  to{
+      margin-top: 0%;
+  }
+}
+/* style protfolio  ----------*/
+
+*{
+  box-sizing: border-box;
+}
+
+
+
+
+.icon-style i{
+  margin-top: 8%;
+  animation: left 2s;
+  font-size: 30px;
+  color: rgb(217,216,211);
+  padding: 3%;
+}
+
+.icon-style i:hover{ color: white; font-weight: bolder;}
+
+.logo-page{
+  padding-top: 23%;
+  width: 50%;
+  animation: left 2s;
+}
+
+.my-name{
+  animation: left 2s;
+  color: rgb(217,216,211);
+}
+
+.list{
+  animation: left 2s;
+  line-height: 100%;
+  padding: 13%;
+  margin: 0 auto;
+}
+
+.list a:hover{ color: white;font-weight: bolder;}
+
+.list-pc{
+  display: block;
+  padding: 4%;
+  font-size: larger;
+  text-decoration: none;
+  color: rgb(217,216,211);
+}
+
+.list-mobile{
+  visibility: hidden;
+}
+
+.footer{
+  margin: 10% auto;
+  text-align: center;
+  width: 80%;
+  color: rgb(217,216,211);
+}
+
+
+
+.my-work{
+  flex: 50%;
+}
+
+.home-page{
+  flex: 50%;
+  animation: right 2s 2ms;
+  margin-top: 10%;
+}
+
+.my-photo{
+  animation: leftdown 2s 2ms;
+}
+
+.home-page p{
+  color: rgb(22, 25, 40);
+  font-weight: 400;
+}
+
+
+
+/* education page ---- */
+.edu-photo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.edu-photo img{
+  width: 100%;
+  height: 80%;
+}
+
+.card {
+  background-color: rgb(22, 25, 40) !important;
+  color: rgb(217,216,211);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container-text{
+  padding: 2%;
+}
+
+.container-text a{
+  color: rgb(217,216,211);
+  text-decoration: none;
+}
+
+/* project page ---- */
+.fram-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Experience ---- */
+.skills{
+  margin-bottom: 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skills h2{
+  padding-left: 5%;
+}
+
+ul{
+  flex: 50%;
+}
+
+ul li{
+  list-style: none;
+}
+
+.icon{
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0.4;
+}
+
+.icon img{
+  width: 8%;
+  padding: 0% 1% 0% 0%;
+}
+
+.footer-mobile{
+  visibility: hidden;
+}
+
+/* ---------- page Responsive ---------- */ 
+
+@media only screen and (max-width: 1300px){
+
+  .style{
+      visibility: hidden;
+  }
+  
+}
+
+@media only screen and (max-width: 1034px){
+  .icon-style i{
+      margin-top: 0;
+      font-size: 24px;
+      padding: 1%;
+      color: rgb(22, 25, 40);
+  }
+
+  .logo-page{
+      display: none;
+  }
+
+  .footer{
+      display: none;
+  }
+
+  .page-left{
+      grid-column: 1 / 3;
+      position: fixed;
+      width: 100%;
+  }
+
+  .list{
+      display: inline;
+  }
+
+  .list-pc{
+      display: none;
+      visibility: hidden;
+  }
+
+  .content{
+      margin-top: 35%;
+  }
+  
+  .list-mobile{
+      color: rgb(217,216,211);
+      visibility: visible;
+  }
+
+  .list-mobile button{
+      color: rgb(217,216,211);
+  }
+
+  .footer{
+      margin: 0 auto;
+  }
+
+  .page-right{
+      grid-column: 1 / 3;
+      position: relative;
+      margin-top: 18%;
+      width: 100%;
+  }
+
+  #home{
+      flex-direction: column;
+  }
+
+  .home-page h1{
+      font-size: 280%;
+      text-shadow: 1px 1px rgba(22, 25, 40, 0.4);
+  }
+
+  .skills{
+      flex-direction: column;
+  }
+
+  .footer-mobile{
+      text-align: center;
+      color: rgb(22, 25, 40);
+      visibility: visible;
+  }
+  
+}
+
+@media only screen and (max-width: 500px){
+  .content{
+      margin-top: 45%;
+  }
+
+  .page-right{
+      grid-column: 1 / 3;
+      position: relative;
+      margin-top: 30%;
+      width: 100%;
+  }
+
+  .list{
+      padding: 50%;
+  }
+  
+  .list a{
+      padding: 5%;
+      font-size: large;
+  }
+
+
+  .home-page h1{
+      font-size: 150%;
+  }
+}
